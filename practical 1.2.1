@@ -1,0 +1,15 @@
+course = int(input())
+marks=list(map(int,input().split()))
+if any(marks<40 for marks in marks):
+	print("Fail")
+else:
+	total=sum(marks)/course
+	print(f"Aggregate Percentage: {total:.2f}")
+	if total>75:
+		print("Grade: Distinction")
+	elif total>=60:
+		print("Grade: First Division")
+	elif total>=50:
+		print("Grade: Second Division")
+	elif total>=40:
+		print("Grade: Third Division")
